@@ -6,6 +6,12 @@ interface IUser
     toTextString(): void;
 }
 
+function LogClass(constructor : Function)
+{
+    console.log(`constructor: ${constructor}`);
+}
+
+@LogClass
 class User implements IUser
 {
     constructor(firstName : string, secondName : string)
